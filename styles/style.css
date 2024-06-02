@@ -21,14 +21,14 @@
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
   font-size: 18px;
-  font-variation-settings: "wght" var(--font-weight), 400;
+  font-variation-settings: "wght" var(--font-weight);
   line-height: 1.17;
   color: var(--text-clr);
   background: var(--bg-image, #1a1a1a) center / cover fixed;
 }
 
 .box-width {
-  inline-size: var(--box-width);
+  inline-size: var(--box-width);  
 }
 
 .header {
@@ -50,7 +50,7 @@
 
 .header__logo {
   font-family: var(--accent-font), fantasy;
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 1;
   font-weight: 400;
   text-transform: uppercase;
@@ -59,7 +59,7 @@
 .header__title {
   font-family: var(--accent-font), fantasy;
   font-weight: 400;
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 1;
   text-transform: uppercase;
 }
@@ -88,6 +88,30 @@
   border: none;
   position: relative;
   padding: 0;
+  transition: color 0.3s;
+}
+
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: 0;
+  border-bottom: 2px solid var(--hover-clr);
+  width: 0%;
+  transition: width 0.3s;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  left: -6px;
+  top: 0;
+}
+
+.theme-menu__button:focus {
+  color: var(--hover-clr);
+  outline: none;
+  transition: width 0.3s;
 }
 
 .theme-menu__button::after {
@@ -99,11 +123,28 @@
   width: 0%;
 }
 
+.theme-menu__button:focus-visible:after {
+  width: 100%;   
+}
+
+.theme-menu__button:hover {
+  color: var(--hover-clr);  
+}
+
+.theme-menu__button:disabled {
+  color: var(--hover-clr);
+  transition: color ease 0.3s;
+  pointer-events: none;
+
+}
+
 .theme-menu__button:disabled::before {
   content: "▶";
-  position: absolute;
-  left: -6px;
-  top: 0;
+  color: var(--hover-clr);
+  transition: color ease 0.3s;
+  pointer-events: none;
+  left: -20px;
+  animation: cursor 0.5s linear infinite alternate;
 }
 
 .post__content {
@@ -118,7 +159,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   background-color: var(--bg-clr);
   border: 2px solid var(--border-clr);
 }
@@ -141,7 +182,7 @@
 }
 
 .image-card {
-  object-fit: fill;
+  object-fit: cover;
   object-position: center;
   aspect-ratio: 1/1;
   inline-size: 100%;
@@ -224,6 +265,8 @@
   display: flex;
   justify-content: end;
   align-items: center;
+  padding: 0;
+  gap: 0.4rem;
 }
 
 .card__icon-button {
@@ -231,6 +274,16 @@
   background-color: transparent;
   cursor: pointer;
   border: 2px solid transparent;
+  padding: 0;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--border-clr);
+  transition: border 0.3s ease;  
 }
 
 .button {
@@ -241,11 +294,47 @@
   border: 2px solid var(--border-clr);
   cursor: pointer;
   line-height: 2.4;
-  position: relative;
+  position: relative;  
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px var(--border-clr);
+  transition: box-shadow 0.3s;
+}
+
+.button::before {
+  content: "";
+  inline-size: 100%;
+  block-size: 100%;
+  position: absolute;
+  transform: scaleX(0);
+  background-color: var(--border-clr);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
 }
 
 .card__like-button {
   inline-size: 130px;
+  align-self: center;
+}
+
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+  border: 2px solid var(--border-clr);
+  transition: border 0.3s ease;  
 }
 
 .button__text {
@@ -268,7 +357,7 @@
 
 .button__save {
   gap: 8px;
-  margin: 0 auto;
+  margin: 0 auto 103px;
   line-height: 0.9;
   padding: 15px 18.5px;
   background-color: var(--bg-clr);
@@ -293,6 +382,7 @@
   display: flex;
   gap: 30px;
   flex-direction: column;
+  padding: 30px;
 }
 
 .dialog::backdrop {
@@ -329,7 +419,7 @@
   font-family: var(--accent-font), fantasy;  
 }
 
-@media (width <= 375px) {
+@media (max-width: 375px) {
   .page {
     max-inline-size: 100vw;
   }
@@ -340,10 +430,6 @@
 
   .header__logo {
     font-size: 3.06rem;
-  }
-
-  .header__title {
-    font-size: 14px;
   }
 
   .button__save {

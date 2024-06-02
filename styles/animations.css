@@ -12,45 +12,6 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
-.theme-menu__button:focus {
-  color: var(--hover-clr);
-  outline: none;
-}
-
-.theme-menu__button::after {
-  content: "";
-  position: absolute;
-  top: 1em;
-  left: 0;
-  border-bottom: 2px solid var(--hover-clr);
-  width: 0%;
-}
-
-.theme-menu__button:focus-visible:after {
-  width: 100%;
-  transition: width 0.3s;
-}
-
-.theme-menu__button:hover {
-  color: var(--hover-clr);
-  transition: color 0.3s;
-}
-
-.theme-menu__button:disabled {
-  color: var(--hover-clr);
-  transition: color ease 0.3s;
-  pointer-events: none;
-
-}
-
-.theme-menu__button:disabled::before {
-  content: "▶";
-  color: var(--hover-clr);
-  transition: color ease 0.3s;
-  pointer-events: none;
-  left: -20px;
-  animation: cursor 0.5s ease-in-out infinite alternate;
-}
 
 @keyframes cursor {
   0% {
@@ -79,7 +40,7 @@
 
 .like-icon:hover .core {
   fill: var(--heart-clr);
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s;
 }
 
 .like-icon:hover .main-body {
@@ -94,17 +55,12 @@
 
 .like-icon:active .core {
   fill: var(--heart-sparks);
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s;
 }
 
 .like-icon:active .main-body {
   fill: var(--heart-sparks);
   transition: fill 0.3s 0.05s;
-}
-
-.like-icon:active .contour {
-  fill: var(--heart-sparks);
-  transition: fill 0.3s;
 }
 
 .like-icon.is-liked .core {
@@ -123,7 +79,7 @@
 }
 
 .like-icon.is-liked .heart {
-  animation: beat 0.3s ease-in 0.1s 2 alternate;
+  animation: beat 0.3s ease-in 0.1s 1 alternate;
 }
 
 @keyframes beat {
@@ -139,7 +95,7 @@
 }
 
 .like-icon.is-liked .sparks {
-  animation: spark 0.3s 0.3s ease-in 2 alternate;
+  animation: spark 0.3s 0.3s ease-in 1 alternate;
 }
 
 @keyframes spark {
@@ -152,29 +108,3 @@
   }
 }
 
-.button:focus {
-  outline: none;
-  border: 2px solid var(--border-clr);
-  transition: border 0.3s ease;
-}
-.button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px var(--border-clr);
-  transition: box-shadow 0.3s;
-}
-
-.button::before {
-  content: "";
-  inline-size: 100%;
-  block-size: 100%;
-  position: absolute;
-  transform: scaleX(0);
-  background-color: var(--border-clr);
-  transform-origin: left;
-  transition: transform 0.5s ease-in-out;
-}
-
-.button:hover::before {
-  transform: scaleX(1);
-  transition: transform 0.5s ease-in-out;
-}

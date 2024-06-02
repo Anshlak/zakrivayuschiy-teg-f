@@ -1,25 +1,34 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
---main-font: 'Inter';
---accent-font: 'PressStart2P';
---bg-clr: #FFFFFF;
---bg-stripes: #d3d3d3;
---bg-gradien-clr-light: #e7e7e7;
---bg-gradien-clr-dark:  #1a1a1a;
---bg-image: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
---text-clr: #000000;
---like-clr: #FFFFFF;
---box-width: clamp(375px, 16.2852rem + 30.5164vw, 700px);
---border-clr: #000000;
---font-weight: 465;
---label-shadow: rgb(255, 255, 255, 0.6);
---label-text: rgba(0, 0, 0, 0.5);
---hover-clr: rgba(0, 0, 0, 0.6);
---heart-clr: #000000;
---heart-sparks: #FF0000;
+  --main-font: "Inter";
+  --accent-font: "PressStart2P";
+  --bg-clr: #ffffff;
+  --bg-stripes: #d3d3d3;
+  --bg-gradien-clr-light: #e7e7e7;
+  --bg-gradien-clr-dark: #1a1a1a;
+  --bg-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --text-clr: #000000;
+  --like-clr: #ffffff;
+  --box-width: clamp(375px, 16.2852rem + 30.5164vw, 700px);
+  --border-clr: #000000;
+  --font-weight: 465;
+  --label-shadow: rgb(255, 255, 255, 0.6);
+  --label-text: rgba(0, 0, 0, 0.5);
+  --hover-clr: rgba(0, 0, 0, 0.6);
+  --heart-clr: #000000;
+  --heart-sparks: #ff0000;
 }
-
-
-
-
-
