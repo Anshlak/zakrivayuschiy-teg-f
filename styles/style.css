@@ -101,13 +101,6 @@
   transition: width 0.3s;
 }
 
-.theme-menu__button:disabled::before {
-  content: "▶";
-  position: absolute;
-  left: -6px;
-  top: 0;
-}
-
 .theme-menu__button:focus {
   color: var(--hover-clr);
   outline: none;
@@ -132,6 +125,8 @@
   transition: color ease 0.3s;
   pointer-events: none;
   left: -20px;
+  top: 0;
+  position: absolute;
   animation: cursor 0.5s ease-in-out infinite alternate;
 }
 
