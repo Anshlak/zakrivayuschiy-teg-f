@@ -9,12 +9,9 @@
   --border-clr: #00cc14;
   --bg-clr: #000000;
   --bg-image: repeating-linear-gradient(
-      to right,
-      #000000 0 2px,
-      transparent 2px 4px
-    ),
-    repeating-linear-gradient(to bottom, #000000 0 2px, transparent 2px 4px),
-    linear-gradient(to bottom, #007f0c 0 0.01%, #004306);
+      to right, #000000 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(to bottom, #000000 0 2px, transparent 2px 4px),
+      linear-gradient(to bottom, #007f0c 0 0.01%, #004306);
   --text-clr: #00cc14;
   --border-clr: #00cc14;
   --label-shadow: rgba(0, 0, 0, 0.6);
@@ -24,18 +21,15 @@
   --heart-clr: #00cc14;
   --heart-sparks: #ff0000;
   --font-weight: 465;
+  --font-weight-title: 785;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-image: repeating-linear-gradient(
-        to right,
-        #000000,
-        0 2px,
-        transparent 2px 4px
-      ),
-      repeating-linear-gradient(to bottom, #000000 0 2px, transparent 2px 4px),
-      linear-gradient(to bottom, #007f0c 0 0.01%, #004306);
+        to right, #000000 0 2px, transparent 2px 4px),
+        repeating-linear-gradient(to bottom, #000000 0 2px, transparent 2px 4px),
+        linear-gradient(to bottom, #007f0c 0 0.01%, #004306);
     --bg-stripes: #000;
     --border-clr: #00cc14;
     --bg-clr: #000000;
@@ -48,6 +42,7 @@
     --heart-clr: #00cc14;
     --heart-sparks: #ff0000;
     --font-weight: 465;
+    --font-weight-title: 785;
   }
 }
 
@@ -58,18 +53,15 @@
   --bg-gradien-clr-dark: #1a1a1a;
   --text-clr: #000000;
   --border-clr: #000000;
-  --font-weight: 465;
+  --font-weight: 400;
+  --font-weight-title: 700;
   --label-shadow: rgb(255, 255, 255, 0.6);
   --label-text: rgba(0, 0, 0);
   --like-clr: #ffffff;
   --hover-clr: rgba(0, 0, 0, 0.6);
   --heart-clr: #000000;
   --heart-sparks: #ff0000;
-  --bg-image: repeating-linear-gradient(
-      to right,
-      #d3d3d3 0 2px,
-      transparent 2px 4px
-    ),
+  --bg-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0 0.01%, #1a1a1a);
 }
@@ -82,7 +74,8 @@
     --bg-gradien-clr-dark: #1a1a1a;
     --text-clr: #000000;
     --border-clr: #000000;
-    --font-weight: 465;
+    --font-weight: 400;
+    --font-weight-title: 700;
     --label-shadow: rgb(255, 255, 255, 0.6);
     --label-text: rgba(0, 0, 0);
     --like-clr: #ffffff;
@@ -90,11 +83,8 @@
     --heart-clr: #000000;
     --heart-sparks: #ff0000;
     --bg-image: repeating-linear-gradient(
-        to right,
-        #d3d3d3 0 2px,
-        transparent 2px 4px
-      ),
-      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-      linear-gradient(to bottom, #e7e7e7 0 0.01%, #1a1a1a);
+        to right, #d3d3d3 0 2px, transparent 2px 4px),
+        repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+        linear-gradient(to bottom, #e7e7e7 0 0.01%, #1a1a1a);
   }
 }

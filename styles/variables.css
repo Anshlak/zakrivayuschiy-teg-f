@@ -13,10 +13,11 @@
   --like-clr: #ffffff;
   --box-width: clamp(375px, 16.2852rem + 30.5164vw, 700px);
   --border-clr: #000000;
-  --font-weight: 465;
+  --font-weight: 400;
   --label-shadow: rgb(255, 255, 255, 0.6);
   --label-text: rgba(0, 0, 0 );
   --hover-clr: rgba(0, 0, 0, 0.6);
   --heart-clr: #000000;
   --heart-sparks: #ff0000;
+  --font-weight-title: 700;
 }
