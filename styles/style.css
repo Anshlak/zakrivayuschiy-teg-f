@@ -238,7 +238,7 @@
   display: flex;
   flex-direction: column;
   gap: 27px;
-  line-height: 1.17em;  
+  line-height: 1.17em;
 }
 
 .card__button {
